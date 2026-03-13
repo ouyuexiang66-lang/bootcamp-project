@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+</head>
+<body class="bg-blue-50 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+
+    <div class="max-w-xl mx-auto p-6">
+        
+        <header class="bg-white dark:bg-slate-800 p-4 rounded-t-xl border-2 border-slate-800 dark:border-slate-700 flex justify-between items-center">
+            <h1 class="text-xl font-bold uppercase tracking-wider dark:text-white">Gestión de Tareas</h1>
+            <button id="dark-mode-toggle" class="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg hover:scale-110 transition-transform">
+                🌙
+            </button>
+        </header>
+
+        <div class="bg-blue-100 dark:bg-slate-900 p-8 border-x-2 border-b-2 border-slate-800 dark:border-slate-700 rounded-b-xl shadow-lg">
+            <div class="flex gap-2 mb-8">
+                <input type="text" id="task-input" placeholder="Añadir una tarea nueva" 
+                    class="flex-1 p-2 rounded-full border-2 border-slate-800 dark:bg-slate-800 dark:text-white outline-none focus:ring-2 focus:ring-blue-400">
+                <button id="add-btn" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full font-bold shadow-md transition-all active:scale-95">
+                    Subir
+                </button>
+            </div>
+
+            <ul id="task-list" class="space-y-4">
+                </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
